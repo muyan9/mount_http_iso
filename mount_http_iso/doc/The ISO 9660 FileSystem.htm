@@ -1,5 +1,6 @@
 <!DOCTYPE html PUBLIC "-//w3c//dtd html 4.0 transitional//en">
 <html><head>
+   <meta content="text/html; charset=UTF-8" http-equiv="content-type">
    <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
    <meta name="ProgId" content="Word.Document">
    <meta name="Generator" content="Microsoft Word 9">
@@ -579,7 +580,7 @@ ul
 <div class="title">The ISO 9660 File System</div>
 
 
-<p class="MsoNormal"><span lang="EN-US"><!--[if !supportEmptyParas]--><!--[endif]--><o:p></o:p></span>
+<p class="MsoNormal"><span lang="EN-US"><!--[if !supportEmptyParas]--><o:p></o:p></span>
 
 </p><p class="subtitle" style="margin-top: 30pt; margin-right: 14.15pt; margin-bottom: 36pt; margin-left: 14.2pt; ">This
 article describes the ISO 9660 file system format used on compact disc
@@ -590,8 +591,8 @@ to other file systems such as the UNIX File System (UFS) used on e.g. SunOS
 systems?
 
 </p><p class="subtitle" style="margin-top: 30pt; margin-right: 14.15pt; margin-bottom: 36pt; margin-left: 14.2pt; ">
-������������ֻ��ʽ���̴洢(CD-ROM)ʹ�õ�ISO 9660�ļ�ϵͳ��ʽ��CD-ROMs�ǳ����������ۣ��г�ռ�������ȥ���ָ������������
-��ˣ�it is
+该文章描述在只读式光盘存储(CD-ROM)使用的ISO 9660文件系统格式。CD-ROMs非常流行且廉价，市场占有率相比去年成指数倍的增长。
+因此，it is
 worthwhile to examine the file system used on CD-ROMs. What makes it different
 to other file systems such as the UNIX File System (UFS) used on e.g. SunOS
 systems?
@@ -602,43 +603,41 @@ systems?
 <br>May 1995
 <br>&nbsp;
 </p><p><!--[if !supportLineBreakNewLine]-->
-<br><!--[endif]--></p></div>
-<span style="font-size: 10pt; font-family: Arial; ">
-<br></span>
+<br></p></div>
 <div class="Section2">
 <div class="ParHeader">Introduction<span style="font-size: 16pt; "><o:p></o:p></span></div>
 
 
 <p class="Paragraph">
-��Ƶ����ֻ����ʮ��ʱ�䣬
-the audio compact disks are only one decade old, but surprisingly enough it pushed the vinyl records completely from the market. It was in the beginning of the 1980s
-that Philips and Sony introduced the Compact Disc Digital Audio (CD-DA)
-Standard, better known as the Red Book standard.
-
-</p><p class="Paragraph">It was also Philips and Sony who introduced in 1984
+音频光盘只用了十年时间，却出人意料的把塑胶唱片完全挤出了市场。20世纪80年代是起点，从Philips和Sony引进数字音频光盘(CD-DA)标准，更被广泛称为Red Book standard。
+</p>
+<p class="Paragraph">It was also Philips and Sony who introduced in 1984
 the CD-ROM (Compact Disc Read Only Memory) standard, which is commonly
 known as the Yellow Book standard.
 
-</p><p class="Paragraph">The computer industry immediately saw the benefits
+</p>
+<p class="Paragraph">The computer industry immediately saw the benefits
 of CD-ROMs, namely:
+计算机产业立即看到了 CD-ROMs的利益，换句话说：
 
-</p><p class="Indent" style="mso-list:l0 level1 lfo1"><!--[if !supportLists]--><span style="font-family: Symbol; ">?span style="font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; line-height: normal; font-stretch: normal; font-size-adjust: none; "></span></span><!--[endif]-->
-cheaper in production than tapes
+</p><p class="Indent" style="mso-list:l0 level1 lfo1">
+cheaper in production than tapes比录音带更便宜的生产成品
 
-</p><p class="Indent" style="mso-list:l0 level1 lfo1"><!--[if !supportLists]--><span style="font-family: Symbol; ">?span style="font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; line-height: normal; font-stretch: normal; font-size-adjust: none; "></span></span><!--[endif]-->
-cheaper in shipping to customers
+</p><p class="Indent" style="mso-list:l0 level1 lfo1">
+cheaper in shipping to customers运送到客户的成本更低
 
-</p><p class="Indent" style="mso-list:l0 level1 lfo1"><!--[if !supportLists]--><span style="font-family: Symbol; ">?span style="font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; line-height: normal; font-stretch: normal; font-size-adjust: none; "></span></span><!--[endif]-->
-less vulnerable to dust, fingerprints, magnetic fields than tapes
+</p><p class="Indent" style="mso-list:l0 level1 lfo1">
+less vulnerable to dust, fingerprints, magnetic fields than tapes相对于录音带更少受灰尘、指纹、磁场的影响
 
-</p><p class="Indent" style="mso-list:l0 level1 lfo1"><!--[if !supportLists]--><span style="font-family: Symbol; ">?span style="font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; line-height: normal; font-stretch: normal; font-size-adjust: none; "></span></span><!--[endif]-->
-large capacity, more than 600 Mbytes
+</p><p class="Indent" style="mso-list:l0 level1 lfo1">
+large capacity, more than 600 Mbytes大容量，超过600M
 
-</p><p class="Indent" style="mso-list:l0 level1 lfo1"><!--[if !supportLists]--><span style="font-family: Symbol; ">?span style="font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; line-height: normal; font-stretch: normal; font-size-adjust: none; "></span></span><!--[endif]-->
+</p><p class="Indent" style="mso-list:l0 level1 lfo1">
 cannot be overwritten by accident, because it is a read-only medium
+不会被以外覆盖，因为是只读媒介
 
 </p><p class="Paragraph">Therefore, it did not take long before the CD-ROM
-became quiet popular among developers and customers.
+became quiet popular among developers and customers.因此，没用多长时间就悄悄地受到了开发者和客户们的欢迎。
 
 </p><p class="Paragraph">However, to make a CD-ROM was until last year problematic
 because for mastering a CD-ROM special equipment was needed. These so called
@@ -650,16 +649,18 @@ about 60 BEF a piece, which is a fair price!
 </p><p class="Paragraph">The only problem was that CD-ROMs were not interchangeable
 amongst different computer architectures. The ISO 9660 standard was created
 to define the external characteristics of data on a CD-ROM to make it architecture
-independent. The first standard did not quite go far enough, so an <i>ad
-hoc</i> committee of hardware and software suppliers met at the High Sierra
-Hotel in Nevada (USA) and drew up a proposal for the ?High Sierra? format
+independent. The first standard did not quite go far enough, so an <i>ad hoc</i> committee of hardware and software suppliers 
+met at the High Sierra Hotel in Nevada (USA) and drew up a proposal for the ?High Sierra? format
 for CD-ROM file structure. The previous ISO 9660 standard and the High
 Sierra file structure were combined into a complete ISO 9660 standard (1988).
-
+唯一的问题是 CD-ROMs在不同的计算机平台中是不能交换的。
+ISO 9660标准被创建为定义在CD-ROM上独立风格数据的外部特征。
+第一个标准不是很成功，所以硬件和软件供应商特别委员会在内华达州高山酒店聚会，草拟一份CD-ROM文件结构叫高山格式，
+之前的ISO 9660标准和高山文件结构合并成一个完成的ISO 9660标准（1988）。
 </p><p class="Paragraph">There are almost 6 million CD readers sold until now,
 which proves that CD-ROMs are a very popular medium among the commercial
 and non-commercial end-users.
-
+至今已经有差不多6百万商业和非商业最终用户证明CD-ROMs是非常流行的中介。
 </p><p class="ParHeader">Colour books of standards
 
 </p><p class="Paragraph">The Compact Disc Digital Audio (CD-DA) standard (or
@@ -691,16 +692,16 @@ two new types of tracks.
 
 </p><p class="Paragraph">The track type defined in the Red Book is:
 
-</p><p class="Indent" style="mso-list:l0 level1 lfo1"><!--[if !supportLists]--><span style="font-family: Symbol; ">?span style="font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; line-height: normal; font-stretch: normal; font-size-adjust: none; "></span></span><!--[endif]-->
-CD-Audio,<span style="mso-tab-count:1"></span> for audio music.
+</p><p class="Indent" style="mso-list:l0 level1 lfo1">
+CD-Audio, for audio music.
 
 </p><p class="Paragraph">The two new track types defined in the Yellow Book
 are:
 
-</p><p class="Indent" style="mso-list:l0 level1 lfo1"><!--[if !supportLists]--><span style="font-family: Symbol; ">?span style="font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; line-height: normal; font-stretch: normal; font-size-adjust: none; "></span></span><!--[endif]-->
+</p><p class="Indent" style="mso-list:l0 level1 lfo1">
 CD-ROM Mode 1, usually used for computer data.
 
-</p><p class="Indent" style="mso-list:l0 level1 lfo1"><!--[if !supportLists]--><span style="font-family: Symbol; ">?span style="font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; line-height: normal; font-stretch: normal; font-size-adjust: none; "></span></span><!--[endif]-->
+</p><p class="Indent" style="mso-list:l0 level1 lfo1">
 CD-ROM Mode 2, usually used for compressed audio data, and video/picture
 data. Also, usually further defined as XA (eXtended Architecture).
 
@@ -723,16 +724,16 @@ DOS, UNIX, MacOS, AmigaDOS and other OSes.
 </p><p class="Paragraph" style="text-indent: 7.2pt; ">The CD-ROM Mode 1 divides
 the 2352 byte data area defined by the Red Book standards into the following:
 
-</p><p class="Indent" style="mso-list:l0 level1 lfo1"><!--[if !supportLists]--><span style="font-family: Symbol; ">?span style="font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; line-height: normal; font-stretch: normal; font-size-adjust: none; "></span></span><!--[endif]-->
+</p><p class="Indent" style="mso-list:l0 level1 lfo1">
 12 bytes of synchronisation
 
-</p><p class="Indent" style="mso-list:l0 level1 lfo1"><!--[if !supportLists]--><span style="font-family: Symbol; ">?span style="font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; line-height: normal; font-stretch: normal; font-size-adjust: none; "></span></span><!--[endif]-->
+</p><p class="Indent" style="mso-list:l0 level1 lfo1">
 4 bytes of header information
 
-</p><p class="Indent" style="mso-list:l0 level1 lfo1"><!--[if !supportLists]--><span style="font-family: Symbol; ">?span style="font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; line-height: normal; font-stretch: normal; font-size-adjust: none; "></span></span><!--[endif]-->
+</p><p class="Indent" style="mso-list:l0 level1 lfo1">
 2048 bytes of user information
 
-</p><p class="Indent" style="mso-list:l0 level1 lfo1"><!--[if !supportLists]--><span style="font-family: Symbol; ">?span style="font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; line-height: normal; font-stretch: normal; font-size-adjust: none; "></span></span><!--[endif]-->
+</p><p class="Indent" style="mso-list:l0 level1 lfo1">
 288 bytes of error correction and detection codes.
 
 </p><p class="Paragraph" style="text-indent: 7.2pt; ">The first 16 bytes contain
@@ -749,13 +750,13 @@ needed for certain types of computer data.
 </p><p class="Paragraph" style="text-indent: 7.2pt; ">CD-ROM Mode 2 redefines
 the use of the 2352 byte data area as follows:
 
-</p><p class="Indent" style="mso-list:l0 level1 lfo1"><!--[if !supportLists]--><span style="font-family: Symbol; ">?span style="font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; line-height: normal; font-stretch: normal; font-size-adjust: none; "></span></span><!--[endif]-->
+</p><p class="Indent" style="mso-list:l0 level1 lfo1">
 12 bytes of synchronisation
 
-</p><p class="Indent" style="mso-list:l0 level1 lfo1"><!--[if !supportLists]--><span style="font-family: Symbol; ">?span style="font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; line-height: normal; font-stretch: normal; font-size-adjust: none; "></span></span><!--[endif]-->
+</p><p class="Indent" style="mso-list:l0 level1 lfo1">
 4 bytes of header information
 
-</p><p class="Indent" style="mso-list:l0 level1 lfo1"><!--[if !supportLists]--><span style="font-family: Symbol; ">?span style="font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; line-height: normal; font-stretch: normal; font-size-adjust: none; "></span></span><!--[endif]-->
+</p><p class="Indent" style="mso-list:l0 level1 lfo1">
 2336 bytes of user data.
 
 </p><p class="Paragraph">The main advantage of Mode 2 is that it provides an
@@ -778,7 +779,7 @@ computer data while it?s playing audio.
 format that lent itself to the incorporation of audio and video/picture
 data. To define this extension to the Yellow Book standard, Sony and Philips
 produced the Compact Disc Read Only Memory Extended Architecture (CD-ROM/XA).
-The XA disc has compressed audio<span style="mso-spacerun: yes"></span>and
+The XA disc has compressed audio and
 computer data interleaved on the same track, so it can read the computer
 data and play audio on the same time.
 
@@ -901,7 +902,7 @@ page;mso-element-left:91.65pt;mso-element-top:64.85pt;mso-height-rule:exactly">&
   </v:shapetype><v:shape id="_x0000_i1025" type="#_x0000_t75" style='width:425.25pt;
    height:323.25pt'>
    <v:imagedata src="./ISO9960_files/image001.png" o:title=""/>
-  </v:shape><![endif]--><!--[if !vml]--><img src="The%20ISO%209660%20FileSystem_files/image002.gif" v:shapes="_x0000_i1025" height="431" width="567"><!--[endif]--></div>
+  </v:shape><![endif]--><!--[if !vml]--><img src="The%20ISO%209660%20FileSystem_files/image002.gif" v:shapes="_x0000_i1025" height="431" width="567"></div>
 </div>
 </td>
 </tr>
@@ -939,13 +940,13 @@ like the partition table of MS-DOS).
 of the file system information present on a given CD-ROM, or volume. It
 is divided into two parts;
 
-</p><p class="Indent" style="mso-list:l0 level1 lfo1"><!--[if !supportLists]--><span style="font-family: Symbol; ">?span style="font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; line-height: normal; font-stretch: normal; font-size-adjust: none; "></span></span><!--[endif]-->
+</p><p class="Indent" style="mso-list:l0 level1 lfo1">
 the type of volume descriptor, and
 
-</p><p class="Indent" style="mso-list:l0 level1 lfo1"><!--[if !supportLists]--><span style="font-family: Symbol; ">?span style="font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; line-height: normal; font-stretch: normal; font-size-adjust: none; "></span></span><!--[endif]-->
+</p><p class="Indent" style="mso-list:l0 level1 lfo1">
 the characteristics of the descriptor.
 
-</p><p class="Paragraph"><span style="mso-spacerun: yes"></span>The volume
+</p><p class="Paragraph"> The volume
 descriptor is constructed in this matter so that if a program reading the
 disk does not understand a particular descriptor, it can just skip over
 it until it finds one it recognises, thus allowing the use of many different
@@ -992,7 +993,7 @@ page;mso-element-left:86.4pt;mso-element-top:648.05pt;mso-height-rule:exactly">&
 </tr>
 </tbody></table>
 </div>
-<!--[if !supportTextWrap]--><!--[endif]-->
+<!--[if !supportTextWrap]-->
 <div style="mso-element:frame;mso-element-frame-width:197.55pt;mso-element-frame-height:
 109.55pt;mso-element-wrap:no-wrap-beside;mso-element-anchor-horizontal:page;
 mso-element-left:84.45pt;mso-element-top:532.85pt">&nbsp;
@@ -1008,19 +1009,19 @@ mso-element-left:84.45pt;mso-element-top:532.85pt">&nbsp;
   page;mso-element-left:84.45pt;mso-element-top:532.85pt"><!--[if gte vml 1]><v:shape
    id="_x0000_i1026" type="#_x0000_t75" style='width:198.75pt;height:96pt'>
    <v:imagedata src="./ISO9960_files/image003.gif" o:title=""/>
-  </v:shape><![endif]--><!--[if !vml]--><img src="The%20ISO%209660%20FileSystem_files/image003.gif" v:shapes="_x0000_i1026" height="128" width="265"><!--[endif]--></div>
+  </v:shape><![endif]--><!--[if !vml]--><img src="The%20ISO%209660%20FileSystem_files/image003.gif" v:shapes="_x0000_i1026" height="128" width="265"></div>
 </div>
 </td>
 </tr>
 </tbody></table>
 </div>
 <!--[if !supportTextWrap]-->
-<p><!--[endif]-->
+<p>
 
 </p><p class="Paragraph">Figure 2 illustrates, the Big Endian addressing model
 assigns or maps the lowest address to the highest-order (that is, the most
 significant or leftmost) data byte of a multibyte-scalar data item. The
-Little Endian<span style="mso-spacerun: yes"></span>addressing model assigns
+Little Endian addressing model assigns
 or maps the lowest address to the lowest-order (least significant or right-most)
 data byte of a multibyte-scalar data item.
 
@@ -1063,25 +1064,25 @@ is an example of an Hybrid disc.
 </p><p class="Paragraph">Referring back to Figure 3, the first entry is the
 Volume Descriptor Type (<i>type</i>), where it can have the following values:
 
-</p><p class="Indent" style="mso-list:l0 level1 lfo1"><!--[if !supportLists]--><span style="font-family: Symbol; ">?span style="font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; line-height: normal; font-stretch: normal; font-size-adjust: none; "></span></span><!--[endif]--><b>
+</p><p class="Indent" style="mso-list:l0 level1 lfo1"><b>
 Number 0</b>: shall mean that the Volume Descriptor is a Boot Record
 
-</p><p class="Indent" style="mso-list:l0 level1 lfo1"><!--[if !supportLists]--><span style="font-family: Symbol; ">?span style="font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; line-height: normal; font-stretch: normal; font-size-adjust: none; "></span></span><!--[endif]--><b>
+</p><p class="Indent" style="mso-list:l0 level1 lfo1"><b>
 Number 1</b>: shall mean that the Volume Descriptor is a Primary Volume
 Descriptor
 
-</p><p class="Indent" style="mso-list:l0 level1 lfo1"><!--[if !supportLists]--><span style="font-family: Symbol; ">?span style="font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; line-height: normal; font-stretch: normal; font-size-adjust: none; "></span></span><!--[endif]--><b>
+</p><p class="Indent" style="mso-list:l0 level1 lfo1"><b>
 Number 2</b>: shall mean that the Volume Descriptor is a Supplementary
 Volume Descriptor<o:p></o:p>
 
-</p><p class="Indent" style="mso-list:l0 level1 lfo1"><!--[if !supportLists]--><span style="font-family: Symbol; ">?span style="font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; line-height: normal; font-stretch: normal; font-size-adjust: none; "></span></span><!--[endif]--><b>
+</p><p class="Indent" style="mso-list:l0 level1 lfo1"><b>
 Number 3</b>: shall mean that the Volume Descriptor is a Volume Partition
 Descriptor
 
-</p><p class="Indent" style="mso-list:l0 level1 lfo1"><!--[if !supportLists]--><span style="font-family: Symbol; ">?span style="font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; line-height: normal; font-stretch: normal; font-size-adjust: none; "></span></span><!--[endif]--><b>
+</p><p class="Indent" style="mso-list:l0 level1 lfo1"><b>
 Numbers 4-254</b> are reserved
 
-</p><p class="Indent" style="mso-list:l0 level1 lfo1"><!--[if !supportLists]--><span style="font-family: Symbol; ">?span style="font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; line-height: normal; font-stretch: normal; font-size-adjust: none; "></span></span><!--[endif]--><b>
+</p><p class="Indent" style="mso-list:l0 level1 lfo1"><b>
 Number 255</b>: shall mean that the Volume Descriptor is a Volume Descriptor
 Set Terminator.
 </p><div style="mso-element:frame;mso-element-wrap:auto;mso-element-anchor-horizontal:
@@ -1098,7 +1099,7 @@ page;mso-element-left:84.45pt;mso-element-top:64.85pt;mso-height-rule:exactly">&
   64.85pt;mso-height-rule:exactly"><!--[if gte vml 1]><v:shape id="_x0000_i1027"
    type="#_x0000_t75" style='width:425.25pt;height:459pt'>
    <v:imagedata src="./ISO9960_files/image004.png" o:title=""/>
-  </v:shape><![endif]--><!--[if !vml]--><img src="The%20ISO%209660%20FileSystem_files/image005.gif" v:shapes="_x0000_i1027" height="612" width="567"><!--[endif]--></div>
+  </v:shape><![endif]--><!--[if !vml]--><img src="The%20ISO%209660%20FileSystem_files/image005.gif" v:shapes="_x0000_i1027" height="612" width="567"></div>
 </div>
 </td>
 </tr>
@@ -1141,7 +1142,7 @@ on the CD-ROM. It is recorded according the 733 method (see Figure 4).
 <div class="LargeFigure"><!--[if gte vml 1]><v:shape id="_x0000_i1028" type="#_x0000_t75"
    style='width:425.25pt;height:264.75pt'>
    <v:imagedata src="./ISO9960_files/image006.gif" o:title=""/>
-  </v:shape><![endif]--><!--[if !vml]--><img src="The%20ISO%209660%20FileSystem_files/image006.gif" v:shapes="_x0000_i1028" height="353" width="567"><!--[endif]--></div>
+  </v:shape><![endif]--><!--[if !vml]--><img src="The%20ISO%209660%20FileSystem_files/image006.gif" v:shapes="_x0000_i1028" height="353" width="567"></div>
 </div>
 </td>
 </tr>
@@ -1197,7 +1198,7 @@ in the directory entry is of variable length).
 <div class="LargeFigure"><!--[if gte vml 1]><v:shape id="_x0000_i1029" type="#_x0000_t75"
    style='width:425.25pt;height:215.25pt'>
    <v:imagedata src="./ISO9960_files/image007.png" o:title=""/>
-  </v:shape><![endif]--><!--[if !vml]--><img src="The%20ISO%209660%20FileSystem_files/image008.gif" v:shapes="_x0000_i1029" height="287" width="567"><!--[endif]--></div>
+  </v:shape><![endif]--><!--[if !vml]--><img src="The%20ISO%209660%20FileSystem_files/image008.gif" v:shapes="_x0000_i1029" height="287" width="567"></div>
 </div>
 </td>
 </tr>
@@ -1223,7 +1224,7 @@ file system directory entry</div>
 
 <p class="Paragraph">File attributes are very simple in ISO-9660. The most
 important file attribute is determining whether the file is a directory
-or an ordinary file.<span style="mso-spacerun: yes"></span>File attributes
+or an ordinary file. File attributes
 for the file described by the directory entry are stored in the directory
 entry and optionally, in the extended attribute record. The name length
 field specifies how long the name is and is limited to 31 characters.
@@ -1259,7 +1260,7 @@ for much more than just pointing to files. Directory entries can point
 to other entries (symbolic links) or to device drivers that are linked
 to peripheral devices such as hard disks, tape drives and CD-ROM drives
 (device files). The directory entry includes information that lets the
-system know what type of file it<span style="mso-spacerun: yes"></span>
+system know what type of file it 
 is dealing with, whether it is a regular file, directory, symbolic link,
 or device file. It also has information regarding who has permission to
 read, write and execute each file. Most of these systems are multi-users
@@ -1272,7 +1273,7 @@ no read access to files.
 </p><p class="ParHeader">File Pathname Traversal
 
 </p><p class="Paragraph">There are two ways to locate a file on an ISO 9660
-file system. One way is to successively interpret the directory names and<span style="mso-spacerun: yes"></span>
+file system. One way is to successively interpret the directory names and 
 look through each directory file structure to find the file (much the way
 MS-DOS and UNIX work to find a file). The other way is through the use
 of a precompiled table of paths, where all the entries are enumerated in
@@ -1338,11 +1339,11 @@ for new applications (to be defined).
 
 </p><p class="ParHeader">References
 
-</p><p class="Paragraph"><!--[if !supportEmptyParas]--><!--[endif]--><o:p></o:p>
+</p><p class="Paragraph"><!--[if !supportEmptyParas]--><o:p></o:p>
 
-</p><p class="Paragraph"><!--[if !supportEmptyParas]--><!--[endif]--><o:p></o:p>
+</p><p class="Paragraph"><!--[if !supportEmptyParas]--><o:p></o:p>
 
-</p><p class="Paragraph"><!--[if !supportEmptyParas]--><!--[endif]--><o:p></o:p></p></div>
+</p><p class="Paragraph"><!--[if !supportEmptyParas]--><o:p></o:p></p></div>
 
 
 
