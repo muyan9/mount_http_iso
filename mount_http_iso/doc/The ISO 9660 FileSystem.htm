@@ -1,14 +1,7 @@
 <!DOCTYPE html PUBLIC "-//w3c//dtd html 4.0 transitional//en">
 <html><head>
    <meta content="text/html; charset=UTF-8" http-equiv="content-type">
-   <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
-   <meta name="ProgId" content="Word.Document">
-   <meta name="Generator" content="Microsoft Word 9">
-   <meta name="Originator" content="Microsoft Word 9">
-   <meta name="GENERATOR" content="Mozilla/4.78 [en] (X11; U; Linux 2.4.16 i686) [Netscape]">
    <title>The ISO 9660 FileSystem</title>
-<link rel="File-List" href="http://users.telenet.be/it3.consultants.bvba/handouts/ISO9960_files/filelist.xml">
-<link rel="Edit-Time-Data" href="http://users.telenet.be/it3.consultants.bvba/handouts/ISO9960_files/editdata.mso">
 <!--[if !mso]>
 <style>
 v\:* {behavior:url(#default#VML);}
@@ -618,26 +611,31 @@ known as the Yellow Book standard.
 </p>
 <p class="Paragraph">The computer industry immediately saw the benefits
 of CD-ROMs, namely:
-计算机产业立即看到了 CD-ROMs的利益，换句话说：
+<br>计算机产业立即看到了 CD-ROMs的利益，换句话说：
 
 </p><p class="Indent" style="mso-list:l0 level1 lfo1">
-cheaper in production than tapes比录音带更便宜的生产成品
+cheaper in production than tapes
+<br>比录音带更便宜的生产成品
 
 </p><p class="Indent" style="mso-list:l0 level1 lfo1">
-cheaper in shipping to customers运送到客户的成本更低
+cheaper in shipping to customers
+<br>运送到客户的成本更低
 
 </p><p class="Indent" style="mso-list:l0 level1 lfo1">
-less vulnerable to dust, fingerprints, magnetic fields than tapes相对于录音带更少受灰尘、指纹、磁场的影响
+less vulnerable to dust, fingerprints, magnetic fields than tapes
+<br>相对于录音带更少受灰尘、指纹、磁场的影响
 
 </p><p class="Indent" style="mso-list:l0 level1 lfo1">
-large capacity, more than 600 Mbytes大容量，超过600M
+large capacity, more than 600 Mbytes
+<br>大容量，超过600M
 
 </p><p class="Indent" style="mso-list:l0 level1 lfo1">
 cannot be overwritten by accident, because it is a read-only medium
-不会被以外覆盖，因为是只读媒介
+<br>不会被意外覆盖，因为是只读媒介
 
 </p><p class="Paragraph">Therefore, it did not take long before the CD-ROM
-became quiet popular among developers and customers.因此，没用多长时间就悄悄地受到了开发者和客户们的欢迎。
+became quiet popular among developers and customers.
+<br>因此，没用多长时间就悄悄地受到了开发者和客户们的欢迎。
 
 </p><p class="Paragraph">However, to make a CD-ROM was until last year problematic
 because for mastering a CD-ROM special equipment was needed. These so called
@@ -653,25 +651,26 @@ independent. The first standard did not quite go far enough, so an <i>ad hoc</i>
 met at the High Sierra Hotel in Nevada (USA) and drew up a proposal for the ?High Sierra? format
 for CD-ROM file structure. The previous ISO 9660 standard and the High
 Sierra file structure were combined into a complete ISO 9660 standard (1988).
-唯一的问题是 CD-ROMs在不同的计算机平台中是不能交换的。
+<br>唯一的问题是 CD-ROMs在不同的计算机平台中是不能交换的。
 ISO 9660标准被创建为定义在CD-ROM上独立风格数据的外部特征。
 第一个标准不是很成功，所以硬件和软件供应商特别委员会在内华达州高山酒店聚会，草拟一份CD-ROM文件结构叫高山格式，
 之前的ISO 9660标准和高山文件结构合并成一个完成的ISO 9660标准（1988）。
 </p><p class="Paragraph">There are almost 6 million CD readers sold until now,
 which proves that CD-ROMs are a very popular medium among the commercial
 and non-commercial end-users.
-至今已经有差不多6百万商业和非商业最终用户证明CD-ROMs是非常流行的中介。
+<br>至今已经有差不多6百万商业和非商业最终用户证明CD-ROMs是非常流行的中介。
 </p><p class="ParHeader">Colour books of standards
 
 </p><p class="Paragraph">The Compact Disc Digital Audio (CD-DA) standard (or
 just CD) made by Philips and Sony in the early 1980s became the de facto
-standard for all audio discs, and means that any CD plays on any audio
-CD drive. This standard became known as the Red Book. The Red Book specifies
+standard for all audio discs, and means that any CD plays on any audio CD drive. This standard became known as the Red Book. The Red Book specifies
 that the audio data is on the CD in one or more tracks. Each track is normally
 one song. These tracks are further subdivided into sectors that are 1/75
 of a second in length and contain 2352 bytes of audio data in digital form.
 A maximum of 99 audio tracks may be placed on a standard Red Book disc.
-
+<br>数字音频光盘标准使飞利浦和索尼在1980s成文了所有音频磁盘的事实标准，且意味着任何CD都可以在任何音频CD机上播放。
+这个标准以红皮书而广为人知。红皮书指定了音频数据保存在CD上的一个或多个音轨上。
+每个音轨通常是一首歌。这些音轨进一步细分为1/75秒长度的扇区，每个扇区以数字形式包含2352字节的音频数据
 </p><p class="Paragraph">In addition to the 2352 bytes of audio data, the Red
 Book specifies the addition of 2 layers of error detection and error correction
 code (EDC/ECC). The compact disc utilises the Cross Interleave Reed-Solomon
@@ -682,88 +681,92 @@ the CIRC to recreate the music.
 </p><p class="Paragraph">Each sector is also assigned 98 control bytes, which
 control the timing information that the CD player uses to display the length
 of each song.<o:p></o:p>
-每个扇区也被指定98个控制字节，用于在CD播放器上显示每首歌的定时信息。
+<br>每个扇区也被指定98个控制字节，用于在CD播放器上显示每首歌的定时信息。
 </p><p class="Paragraph" style="text-indent: 7.2pt; ">The Yellow Book standard
 was introduced by Philips and Sony in 1984 which defined the Compact Disc
 Read Only Memory (CD-ROM) layout.
-黄皮书标准介绍飞利浦和索尼在1984年定义的cdrom层。
+<br>黄皮书标准介绍飞利浦和索尼在1984年定义的cdrom层。
 </p><p class="Paragraph">The Yellow Book further defined the Red Book by adding
 two new types of tracks.
-黄皮书进一步明确了加入红皮书的两个新类型的音轨。
+<br>黄皮书进一步明确了加入红皮书的两个新类型的音轨。
 </p><p class="Paragraph">The track type defined in the Red Book is:
-在红皮书中定义的音轨类型：
+<br>在红皮书中定义的音轨类型：
 </p><p class="Indent" style="mso-list:l0 level1 lfo1">
 CD-Audio, for audio music.
 
 </p><p class="Paragraph">The two new track types defined in the Yellow Book
 are:
-在黄皮书中定义的两条新音轨类型：
+<br>在黄皮书中定义的两种新音轨类型：
 </p><p class="Indent" style="mso-list:l0 level1 lfo1">
 CD-ROM Mode 1, usually used for computer data.
-
+<br>通常用户计算机数据
 </p><p class="Indent" style="mso-list:l0 level1 lfo1">
 CD-ROM Mode 2, usually used for compressed audio data, and video/picture
 data. Also, usually further defined as XA (eXtended Architecture).
-
+<br>通常用于压缩音频数据、图像/图片数据。也通常进一步解释为扩展结构。
 </p><p class="Paragraph" style="text-indent: 7.2pt; ">The CD-ROM Mode 1 and
 Mode 2 tracks use the Red Book specifications as a foundation. The difference
 between the Red Book and the Yellow Book is a redefinition of the 2352
 byte Red Book data area.
-
+<br>模式1和模式2把红皮书作为基础。红皮书和黄皮书之间的区别，是一个2352字节的红皮书数据区域的重定义。
 </p><p class="Paragraph" style="text-indent: 7.2pt; ">Furthermore, the Yellow
 Book CD-ROM Mode 1 and Mode 2 use the same track layout as the Red Book
 specification, including the error correction and control bytes. The fundamental
 difference between the two Yellow Book CD-ROM modes is the way in which
 they use the main data segment.
-
+<br>此外，黄皮书CD-ROM模式1和模式2使用同样的音轨布局，包括纠错和控制字。
+黄皮书CD-ROM两种模式之间根本的不同是使用主数据段的方式不同。
 </p><p class="Paragraph" style="text-indent: 7.2pt; ">The Yellow Book CD-ROM
 Mode 1 defines the ISO 9960 and non-ISO 9660 standards. The ISO 9660 compliant
 CD-ROMs are readable by any kind of (modern) operating systems, such as
 DOS, UNIX, MacOS, AmigaDOS and other OSes.
-
+<br>黄皮书中CD-ROM模式1定义ISO 9960和非ISO 9960标准。
+ISO9660标准的CD-ROM可以被任何种类的（现代）的操作系统读取，如DOS，UNIX，MacOS，AmigaDOS和其他操作系统。
 </p><p class="Paragraph" style="text-indent: 7.2pt; ">The CD-ROM Mode 1 divides
 the 2352 byte data area defined by the Red Book standards into the following:
-
+<br>CD-ROM模式1划分2352字节的数据区定义红皮书标准如下：
 </p><p class="Indent" style="mso-list:l0 level1 lfo1">
 12 bytes of synchronisation
-
+<br>12字节同步
 </p><p class="Indent" style="mso-list:l0 level1 lfo1">
 4 bytes of header information
-
+<br>4字节头信息
 </p><p class="Indent" style="mso-list:l0 level1 lfo1">
 2048 bytes of user information
-
+<br>2048字节用户信息
 </p><p class="Indent" style="mso-list:l0 level1 lfo1">
 288 bytes of error correction and detection codes.
-
+<br>288字节纠错和检测码
 </p><p class="Paragraph" style="text-indent: 7.2pt; ">The first 16 bytes contain
 the synchronisation and header information that the computer uses to determine
 which sector it is reading. The following 2048 bytes contain the actual
 user data. Together, these two subdivisions comprise the full 2352 byte
 portion of the Red Book standard.
-
+<br>前16字节包含计算机用于决定从哪里读的同步和头信息。
+接下来2048字节包含真正的用户数据。
+总之，这两个细分包括在2352字节部分红皮书标准。
 </p><p class="Paragraph" style="text-indent: 7.2pt; ">The last 288 bytes carry
 an additional layer of error correction and direction code. This additional
 layer, which is found only in Mode 1, provides the reliability that is
 needed for certain types of computer data.
-
+<br>最后288字节携带着纠错和定位码的附加层。这个只出现在模式1中的附加层，提供所需的特定类型的计算机数据的可靠性。
 </p><p class="Paragraph" style="text-indent: 7.2pt; ">CD-ROM Mode 2 redefines
 the use of the 2352 byte data area as follows:
-
+<br>2352字节数据区域的用法如下：
 </p><p class="Indent" style="mso-list:l0 level1 lfo1">
 12 bytes of synchronisation
-
+<br>12字节同步
 </p><p class="Indent" style="mso-list:l0 level1 lfo1">
 4 bytes of header information
-
+<br>4字节头信息
 </p><p class="Indent" style="mso-list:l0 level1 lfo1">
 2336 bytes of user data.
-
+<br>2336字节用户数据
 </p><p class="Paragraph">The main advantage of Mode 2 is that it provides an
 additional 14 per cent of the user data space per sector (2336 versus 2048
 bytes). The reason is that Mode 2 does not have the additional EDC and
 ECC error correction data of Mode 1.
-
+<br>
 </p><p class="Paragraph">Mode 2 discs are normally used in extended architecture
 (XA) format. Even without XA, there are still two layers of error correction
 as defined in the Red Book standard. CD-ROM Mode 2 discs can be read by
