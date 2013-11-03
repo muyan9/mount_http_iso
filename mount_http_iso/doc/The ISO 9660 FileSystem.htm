@@ -766,17 +766,26 @@ the use of the 2352 byte data area as follows:
 additional 14 per cent of the user data space per sector (2336 versus 2048
 bytes). The reason is that Mode 2 does not have the additional EDC and
 ECC error correction data of Mode 1.
+模式2的主要优点是，它提供了一个
+额外的14％每扇区的用户数据空间（2336与2048
+字节）。其原因是，模式2不具有模式1额外的EDC和
+ECC错误校正的数据
 <br>
 </p><p class="Paragraph">Mode 2 discs are normally used in extended architecture
 (XA) format. Even without XA, there are still two layers of error correction
 as defined in the Red Book standard. CD-ROM Mode 2 discs can be read by
 a standard CD-ROM drive, but require special software to decode and strip
 the user data from each sector.
+模式2的光盘中通常使用的扩展的体系结构（XA）格式的。即使没有XA，仍然有两层红皮书标准中所定义的纠错。标准的CD-ROM驱动器可以读取CD-ROM模式2张光盘，但需要特殊的软件进行解码，并从各部门剥离用户数据。
 
 </p><p class="Paragraph">CD-ROM Mode 2 allows compressed audio data and video/picture
 data to be incorporated on the disc, thanks to the alignment of the byte
 layout. The drawback is that a CD-ROM drive reading this data cannot read
 computer data while it?s playing audio.
+CD-ROM模式2允许压缩的音频数据和视频/图像
+光盘上的数据被纳入，这要感谢的字节对齐
+布局。其缺点是，在CD-ROM驱动器读取这些数据无法同时读取
+电脑数据和音频播放。
 
 </p><p class="Paragraph">The next step in CD technology was to create a file
 format that lent itself to the incorporation of audio and video/picture
@@ -932,23 +941,26 @@ page;mso-element-left:86.4pt;mso-element-top:403.25pt;mso-height-rule:exactly">&
 <div class="Paragraph">A reserved field at the beginning of the disk is
 present for use in booting CD-ROM on a computer (system area). As a matter
 of fact its use was not specified by the ISO 9660 standard, but generally
-it is used for boot information.</div>
+it is used for boot information.
+在磁盘开始的一个保留字段是用于在启动的CD-ROM上的计算机（系统区域）。由于事实上它的使用是没有SO9660标准规定，但一般它是用于引导信息。</div>
 
 
 <p class="Paragraph">Immediately afterwards, a series of volume descriptors
 details the contents and kind of information contained on the disk (something
 like the partition table of MS-DOS).
+紧接着，一系列卷描述符的详细信息包含的内容和信息工业的磁盘上（类似MS-DOS的分区表）。
 
 </p><p class="Paragraph">A volume descriptor describes the characteristics
 of the file system information present on a given CD-ROM, or volume. It
 is divided into two parts;
+一个卷描述符描述的文件系统的信息存在于一个给定的CD-ROM，或卷的特性。它分为两部分;
 
 </p><p class="Indent" style="mso-list:l0 level1 lfo1">
 the type of volume descriptor, and
-
+卷描述的类型
 </p><p class="Indent" style="mso-list:l0 level1 lfo1">
 the characteristics of the descriptor.
-
+和描述符的特征
 </p><p class="Paragraph"> The volume
 descriptor is constructed in this matter so that if a program reading the
 disk does not understand a particular descriptor, it can just skip over
@@ -958,25 +970,30 @@ descriptor unreadable, a subsequent redundant copy of a descriptor could
 then allow for fault recovery. When checking CD-ROMs with a <i>dump </i>utility
 we find each descriptor back in a single logical sector on itself, and
 also a backup of the descriptor a few logical sectors further.
+卷描述符构建在这个问题上，如果一个程序读取磁盘不明白一个特定的描述，它可以跳过它，直到它找到它承认在一张光盘上，从而允许使用许多不同类型的信息ROM。此外，如果一个错误将导致无法读取的描述符，随后的冗余副本的一个描述符，然后允许故障恢复。当检查转储实用工具的CD-ROM，我们发现每个描述符在一个单一的逻辑扇区本身，也是一个备份几个逻辑扇区进一步的描述符。
 
 </p><p class="Paragraph">The minimum requirement is that it has a primary descriptor
 describing the ISO 9660 file system and an ending descriptor (a variable
 length table that contains information on how many other descriptors are
 present).
+最低要求是，它有一个主切合ISO 9660文件系统描述符和结束描述符（一个可变长度的表中包含的信息有许多其他的描述符是本）。
 
 </p><p class="ParHeader">Little/Big Endian
+小/大端
 
 </p><p class="Paragraph">In order to accommodate the two common byte orders,
 Big Endian (680x0, Sparc) and Little Endian (80x86, Rx000), ISO 9660 has
 data types which allow either and consequently are twice as big.
-
+为了适应两种常见的字节顺序，大端（680x0上，SPARC）和Little Endian（80x86的，Rx000），ISO9660也因此两次大的数据类型允许。
 </p><p class="Paragraph">For example, the 32-bit integer (0x11223344) is represented
 as the byte sequence (0x44, 0x33, 0x22, 0x11, 0x11, 0x22, 0x33, 0x44),
 which is essentially a binary palindrome.
+例如，32位整数（0x11223344）表示为字节序列（0X44，0X33，0X22，0X11，0X11，0X22，0X33，0X44），它本质上是一个二进制回文。
 
 </p><p class="Paragraph">This method is often referred to as 733 (section 7.3.3
 from the ISO 9660 standard, both byte orders) and is represented in Figure
 2.
+这种方法通常称为733（从ISO9660标准，这两个字节顺序的第7.3.3节），在图2中表示。
 <br>&nbsp;
 </p><div class="Paragraph"></div>&nbsp;
 
@@ -1029,10 +1046,12 @@ or maps the lowest address to the lowest-order (least significant or right-most)
 data byte of a multibyte-scalar data item.
 
 </p><p class="ParHeader">ISO 9660 Primary Volume Descriptor
+ISO9660主卷描述符
 
 </p><p class="Paragraph">The ISO 9660 primary volume descriptor describes the
 characteristics of the ISO standard file system information present on
 a given CD-ROM (refer to Figure 3).
+是ISO 9660的主卷描述符描述了ISO标准的文件系统信息，在一个给定的CD-ROM（参见图3）的特性。
 
 </p><p class="Paragraph">The ISO 9660 primary volume descriptor acts much like
 the superblock of the UNIX file system, providing details on the ISO 9660
@@ -1045,6 +1064,7 @@ The root directory is stored as an extent, or sequential series of sectors,
 that contains each of the directory entries appearing in the root. In addition,
 since ISO 9660 works by segmenting the CD-ROM into logical blocks, the
 size of these blocks is found in the primary volume descriptor as well.
+ISO 9660的主卷描述符的行为很像UNIX文件系统的超级块，在ISO9660标准的磁盘部分提供细节。主卷描述符中包含的描述的连续的根目录的位置的根目录记录。 （在UNIX中，目录会作为文件操作系统的特殊用途）。连续地存储在此区域内的目录条目。的评价的ISO9660文件名开始在这个位置。根目录被存储在一定范围上，或一系列连续的扇区，即包含每个出现在根目录中的目录条目。此外，由于分割的逻辑块的CD-ROM插入ISO9660的作品中，发现这些块的大小是在主卷描述符和。
 
 </p><p class="Paragraph">A CD-ROM is only compliant to the ISO 9660 file system
 standard if there is a primary descriptor, and when there is an ending
