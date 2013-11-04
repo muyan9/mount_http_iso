@@ -828,11 +828,11 @@ popular these days (and affordable).
 
 </p><p class="Paragraph">CD-ROM drives in general function like any other write-protected
 disk drive, and the device driver level appear quite ordinary.
-
+任何其他写保护的磁盘驱动器，设备驱动程序级别的一般功能，如CD -ROM驱动器显得相当普通。
 </p><p class="Paragraph">CD-ROMs do not have a fixed number of sectors in a
 fixed-arm position. Instead, an inward spiral of records is arranged to
 maintain minimal latency from record to record.
-
+CD-ROM不具有一个固定在一个固定的臂位置的扇区数。相反，向内螺旋记录被安排从记录记录保持最小的延迟。
 </p><p class="Paragraph">Furthermore, CD-ROMs are not random access, but rather
 sequential access, which is why they tend to be slow, because the head
 hunts to find the desired record. The sectors are indexed by track in the
@@ -842,13 +842,13 @@ drive?s controller. Unlike with hard drives, a separate head is not used
 for timing information, so each time a CD-ROM is moved for random access
 it must search up and down the spiral in the vicinity the head let down
 to find the desired sector.
-
+此外， CD -ROM光盘是不是随机访问的，而是连续的访问，这也是为什么他们往往是缓慢的，因为头捕杀找到所需的记录。部门索引的轨道，以同样的方式柱面，磁头，并且在硬盘驱动器行业指数。使用SCSI ，这些部门被隐藏的逻辑地址转换驱动器中的控制器。与硬盘驱动器不同的是，一个单独的头不用于定时信息，因此，每一次的CD-ROM是用于随机接入移动，它必须寻找和向下的螺旋头让找到所需扇区附近。
 </p><p class="Paragraph">CD-ROM sector sizes are large, usually 2048 bytes
 per sector (larger sizes are possible). Therefore, the concept of <i>logical
 sectors</i> is introduced. Each logical sector, with a constant logical
 sector size (= the sector size), starts in a different sector from any
 other logical sector.
-
+CD - ROM扇区大小大，通常每2048字节扇区（可能是较大规模的） 。因此，逻辑扇区的概念被引入。每一个逻辑扇区时，以恒定的逻辑扇区大小（ =扇区大小） ，开始从任何其他逻辑扇区在不同的扇区。
 </p><p class="ParHeader">File Systems on CD-ROM
 
 </p><p class="Paragraph">A CD-ROM may be mastered with any kind of information
@@ -856,14 +856,14 @@ on it. Sun Microsystems, for example, uses the Berkeley UNIX UFS file systems
 on many CD-ROMs. This make them only usable on Sun equipment, which is
 no big deal for a bootable CD-ROM with an operating system on it, but for
 distributing general information it?s a big limitation.
-
+可能要掌握的CD-ROM与任何类型的信息就可以了。 Sun微系统，例如，使用了Berkeley UNIX UFS文件系统上很多的CD-ROM 。这使得他们只能在Sun的设备，这也没什么大不了的可引导的CD - ROM ，操作系统使用，但分配的一般信息呢？一个很大的限制。
 </p><p class="Paragraph">However, because CD-ROMs are especially suited to
 volume publishing of information, a standard file system useful across
 many kinds of architecture is very desirable. Before there was a standard
 on this matter some were using the High Sierra format on CD-ROM, which
 arranged file information in a dense, sequential layout to minimise nonsequential
 access.
-
+但是，由于体积出版信息特别适合于CD-ROM光盘，一个标准的文件系统用于跨越多种建筑是非常可取的。之前在这个问题上有一个标准，有些人使用高塞拉利昂格式的CD-ROM ，配置文件在一个密集的，连续的布局信息，以尽量减少非顺序访问。
 </p><p class="Paragraph">The High Sierra file system format uses a hierarchical
 (eight levels of directories deep) tree file system arrangement, similar
 to UNIX and MS-DOS. High Sierra has a minimal set of file attributes (directory
@@ -872,11 +872,11 @@ and version). The designers realised they could never get people to agree
 on a unified definition of file attributes, so the minimum <i>common </i>information
 was encoded, and a place for future optional extensions (system use area)
 was defined for each file.
-
+High Sierra文件系统格式使用分层树（八级目录深）文件系统的安排，类似于UNIX和MS-DOS的。高塞拉利昂有文件属性（目录或普通文件和记录时间）和name属性（名称，扩展名，版本）最小的一组。设计者意识到他们不可能让人们同意在一个统一的定义，文件属性，所以最小的公共信息编码，以及未来可选的扩展（系统使用面积）的地方被定义为每个文件。
 </p><p class="Paragraph">High Sierra was soon adapted (with changes) as an
 international standard (ISO 9660-1988), and the ISO 9660 file system format
 is now used throughout the industry.
-
+很快就适应高塞拉利昂（有改动）为国际标准（ ISO 9660-1988 ） ，整个行业现在使用ISO 9660文件系统格式。
 </p><p class="ParHeader">The ISO 9660 File System
 
 </p><p class="Paragraph">An ISO 9660 CD-ROM is described in Figure 1.
@@ -1071,6 +1071,7 @@ standard if there is a primary descriptor, and when there is an ending
 descriptor available (<i>e.g.,</i> the volume descriptor constitute a variable
 length table which contains information on how many other descriptors are
 present).
+CD-ROM是既符合ISO 9660文件系统的标准，如果有一个初级的描述，当有一个结束描述符（如卷描述符构成一个可变长度表，其中包含的信息有多少其他描述）。
 
 </p><p class="Paragraph">It is possible to have many kind of file systems and
 information arrangements on a single CD-ROM. However, while many other
@@ -1083,9 +1084,12 @@ tracks on the disc are audio tracks. Another possibility is the so called
 Hybrid disc, which contains an ISO 9660 part and a non-ISO 9660 part (e.g.
 Apple HFS format). The popular magazine on CD-ROM called ?CD-ROM Today?
 is an example of an Hybrid disc.
+这是可能的，有许多种文件系统和信息安排在一个单一的CD-ROM。然而，尽管许多其他类型的描述符可用于有选择地记录非ISO定义的信息内容，主卷描述符总是存在。甚至有可能是混合模式光盘，包含在同一张光盘上的音频轨迹和数据轨迹。混合模式光盘的最常见的类型是其中第一个光盘上的轨道是模式1的数据（ISO9660或ISO9660非），余下的光盘上的轨道的音频轨道。另一种可能性是所谓的混合光盘，其中包含ISO 9660的部分和一个非ISO9660的一部分（例如苹果HFS格式）。 CD-ROM上的流行杂志叫什么名字？CD-ROM今天？是一个示例的混合光盘。
 
 </p><p class="Paragraph">Referring back to Figure 3, the first entry is the
 Volume Descriptor Type (<i>type</i>), where it can have the following values:
+再参照图3，第一个条目是
+卷描述符类型（<i>type</i>），在那里它可以具有以下值：
 
 </p><p class="Indent" style="mso-list:l0 level1 lfo1"><b>
 Number 0</b>: shall mean that the Volume Descriptor is a Boot Record
